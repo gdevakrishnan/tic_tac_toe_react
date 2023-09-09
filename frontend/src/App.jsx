@@ -52,7 +52,7 @@ function App() {
       setMsg('The Match is Draw');
       setMatch(false);
     }
-    
+
   }), [player]
 
   const myFunction = (turn) => {
@@ -97,7 +97,7 @@ function App() {
           <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(8) }}>{box[8]}</button>
         </div>
       </div>
-      { msg ? <h1 className='bg-yellow-800 text-white px-4 py-1 rounded-sm mt-12 capitalize shadow-xl'>{msg}</h1> : null }
+      { msg ? <h1 className='bg-yellow-800 text-white text-lg px-4 py-1 rounded-sm mt-12 capitalize shadow-xl'>{msg}</h1> : null }
     </Fragment>
   )
 }
