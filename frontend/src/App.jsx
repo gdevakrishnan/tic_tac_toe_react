@@ -47,6 +47,8 @@ function App() {
       setMsg(`${box[2]} - player wins`)
       setMatch(false);
     }
+
+    drawMatch();
   }), [player]
 
   const myFunction = (turn) => {
@@ -66,6 +68,13 @@ function App() {
     setBox({ 0: '', 1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: '' });
     setMatch(true);
     setMsg('');
+  }
+
+  const drawMatch = () => {
+    if (match && box[0] !== '' && box[1] !== '' && box[2] !== '' && box[3] !== '' && box[4] !== '' && box[5] !== '' && box[6] !== '' && box[7] !== '' && box[8] !== '') {
+      setMsg('The Match is Draw');
+      setMatch(false);
+    }
   }
 
   return (
