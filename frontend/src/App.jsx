@@ -76,28 +76,31 @@ function App() {
 
   return (
     <Fragment>
-      <div className="header flex justify-between w-2/6 px-14">
-        <button className='text-white text-xl mb-8 bg-red-600 rounded-sm px-4 py-1 capitalize hover:bg-red-800 shadow-lg' onClick={() => reMatch()}>rematch</button>
-        <h1 className='text-white text-xl mb-8 bg-green-600 rounded-sm px-4 py-1 capitalize cursor-pointer shadow-lg'>player: {player}</h1>
-      </div>
-      <div className='bg-gray-700 w-2/6 h-auto flex flex-col gap-2 justify-center px-4 py-4 rounded-md shadow-2xl'>
-        <div className='w-full flex gap-3'>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(0) }}>{box[0]}</button>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(1) }}>{box[1]}</button>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(2) }}>{box[2]}</button>
+      <section className='w-full min-h-screen flex justify-center items-center flex-col pt-20 pb-20'>
+        <h1 className='text-white text-xl mb-8 bg-indigo-600 rounded-sm px-4 py-1 capitalize cursor-pointer shadow-lg'>{matchDetails.fplayer}:X vs {matchDetails.splayer}:O</h1>
+        <div className="header flex justify-between w-5/6 md:w-4/6 lg:w-6/12 xl:w-2/6  px-14">
+          <button className='text-white text-xl mb-4 bg-red-600 rounded-sm px-4 py-1 capitalize hover:bg-red-800 shadow-lg' onClick={() => reMatch()}>rematch</button>
+          <h1 className='text-white text-xl mb-4 bg-green-600 rounded-sm px-4 py-1 capitalize cursor-pointer shadow-lg'>player: {player}</h1>
         </div>
-        <div className='w-full flex gap-3'>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(3) }}>{box[3]}</button>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(4) }}>{box[4]}</button>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(5) }}>{box[5]}</button>
+        <div className='bg-gray-700 w-5/6 md:w-7/12 lg:w-4/12 h-auto flex flex-col gap-2 justify-center px-4 py-4 rounded-md shadow-2xl'>
+          <div className='w-full flex gap-3'>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(0) }}>{box[0]}</button>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(1) }}>{box[1]}</button>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(2) }}>{box[2]}</button>
+          </div>
+          <div className='w-full flex gap-3'>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(3) }}>{box[3]}</button>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(4) }}>{box[4]}</button>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(5) }}>{box[5]}</button>
+          </div>
+          <div className='w-full flex gap-3'>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(6) }}>{box[6]}</button>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(7) }}>{box[7]}</button>
+            <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(8) }}>{box[8]}</button>
+          </div>
         </div>
-        <div className='w-full flex gap-3'>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(6) }}>{box[6]}</button>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(7) }}>{box[7]}</button>
-          <button className='bg-gray-900 w-4/12 h-28 rounded-sm hover:bg-gray-500 text-yellow-500 text-4xl' onClick={() => { myFunction(8) }}>{box[8]}</button>
-        </div>
-      </div>
-      { msg ? <h1 className='bg-yellow-800 text-white text-lg px-4 py-1 rounded-sm mt-12 capitalize shadow-xl'>{msg}</h1> : null }
+        {msg ? <h1 className='bg-yellow-800 text-white text-lg px-4 py-1 rounded-sm mt-4 capitalize shadow-xl'>{msg}</h1> : null}
+      </section>
     </Fragment>
   )
 }
