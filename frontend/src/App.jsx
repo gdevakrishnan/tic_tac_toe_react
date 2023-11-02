@@ -77,7 +77,6 @@ function App() {
   return (
     <Fragment>
       <section className='w-full min-h-screen flex justify-center items-center flex-col pt-20 pb-20'>
-        <h1 className='text-white text-xl mb-8 bg-indigo-600 rounded-sm px-4 py-1 capitalize cursor-pointer shadow-lg'>{matchDetails.fplayer}:X vs {matchDetails.splayer}:O</h1>
         <div className="header flex justify-between w-5/6 md:w-4/6 lg:w-6/12 xl:w-2/6  px-14">
           <button className='text-white text-xl mb-4 bg-red-600 rounded-sm px-4 py-1 capitalize hover:bg-red-800 shadow-lg' onClick={() => reMatch()}>rematch</button>
           <h1 className='text-white text-xl mb-4 bg-green-600 rounded-sm px-4 py-1 capitalize cursor-pointer shadow-lg'>player: {player}</h1>
